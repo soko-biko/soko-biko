@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { Layout } from './components/Layout';
 import Hero from './pages/Hero';
 import { Explore } from './pages/Explore';
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/trip-planner" element={<TripPlanner />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        <Analytics />
       </Layout>
     </AuthProvider>
   );
